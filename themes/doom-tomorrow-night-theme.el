@@ -1,13 +1,13 @@
 ;;; doom-tomorrow-night-theme.el -*- no-byte-compile: t; -*-
 (require 'doom-themes)
 
+;;; Code:
 (defgroup doom-tomorrow-night-theme nil
   "Options for doom-themes"
   :group 'doom-themes)
 
 (defcustom doom-tomorrow-night-padded-modeline doom-themes-padded-modeline
-  "If non-nil, adds a 4px padding to the mode-line. Can be an integer to
-determine the exact padding."
+  "If non-nil, adds a 4px padding to the mode-line. Can be an integer to determine the exact padding."
   :group 'doom-tomorrow-night-theme
   :type '(choice integer boolean))
 
@@ -15,40 +15,40 @@ determine the exact padding."
   "A theme based off of Chris Kempson's Tomorrow Dark."
 
   ;; name        gui       256       16
-  ((bg         '("#1d1f21" nil       nil          ))
-   (bg-alt     '("#161719" nil       nil          ))
-   (base0      '("#0d0d0d" "black"   "black"      ))
-   (base1      '("#1b1b1b" "#1b1b1b"              ))
-   (base2      '("#212122" "#1e1e1e"              ))
-   (base3      '("#292b2b" "#292929" "brightblack"))
-   (base4      '("#3f4040" "#3f3f3f" "brightblack"))
-   (base5      '("#5c5e5e" "#525252" "brightblack"))
-   (base6      '("#757878" "#6b6b6b" "brightblack"))
-   (base7      '("#969896" "#979797" "brightblack"))
-   (base8      '("#ffffff" "#ffffff" "white"      ))
-   (fg         '("#c5c8c6" "#c5c5c5" "white"))
+  ((bg         '("#181818" nil       nil          ))
+   (bg-alt     '("#181818" nil       nil          ))
+   (base0      '("#181818" "black"   "black"      ))
+   (base1      '("#242424" "#242424"              ))
+   (base2      '("#333333" "#333333"              ))
+   (base3      '("#464646" "#464646" "brightblack"))
+   (base4      '("#626262" "#626262" "brightblack"))
+   (base5      '("#7d7d7d" "#7d7d7d" "brightblack"))
+   (base6      '("#979797" "#979797" "brightblack"))
+   (base7      '("#d2d2d2" "#d2d2d2" "brightblack"))
+   (base8      '("#f5f5f5" "#f5f5f5" "white"      ))
+   (fg         '("#f5f5f5" "#f5f5f5" "white"))
    (fg-alt     (doom-darken fg 0.4))
 
-   (grey       '("#5a5b5a" "#5a5a5a" "brightblack"))
-   (red        '("#cc6666" "#cc6666" "red"))
-   (orange     '("#de935f" "#dd9955" "brightred"))
-   (yellow     '("#f0c674" "#f0c674" "yellow"))
-   (green      '("#b5bd68" "#b5bd68" "green"))
-   (blue       '("#81a2be" "#88aabb" "brightblue"))
-   (dark-blue  '("#41728e" "#41728e" "blue"))
-   (teal       blue) ; FIXME replace with real teal
+   (grey       '("#626262" "#626262" "brightblack"))
+   (red        '("#f24638" "#f24638" "red"))
+   (orange     '("#EB9A4C" "#EB9A4C" "brightred"))
+   (yellow     '("#eea967" "#eea967" "yellow"))
+   (green      '("#5ec45c" "#5ec45c" "green"))
+   (blue       '("#5793e0" "#5793e0" "brightblue"))
+   (dark-blue  '("#1a4986" "#1a4986" "blue"))
+   (teal       '("#008080" "#008080" "blue")) ; FIXME replace with real teal
    (magenta    '("#c9b4cf" "#c9b4cf" "magenta"))
    (violet     '("#b294bb" "#b294bb" "brightmagenta"))
    (cyan       '("#8abeb7" "#8abeb7" "cyan"))
    (dark-cyan  (doom-darken cyan 0.4))
 
    ;; face categories
-   (highlight      blue)
-   (vertical-bar   base0)
-   (selection      `(,(car (doom-lighten bg 0.1)) ,@(cdr base4)))
+   (highlight      orange)
+   (vertical-bar   base1)
+   (selection      base1)
    (builtin        blue)
    (comments       grey)
-   (doc-comments   (doom-lighten grey 0.14))
+   (doc-comments   base4)
    (constants      orange)
    (functions      blue)
    (keywords       violet)
@@ -78,11 +78,11 @@ determine the exact padding."
         4))))
 
   ;; --- faces ------------------------------
-  ((doom-modeline-buffer-path       :foreground violet :bold bold)
+  ((doom-modeline-buffer-path       :foreground orange :bold bold)
    (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
 
    ((line-number &override) :foreground base4)
-   ((line-number-current-line &override) :foreground blue :bold bold)
+   ((line-number-current-line &override) :foreground orange)
 
    ;; rainbow-delimiters
    (rainbow-delimiters-depth-1-face :foreground violet)
