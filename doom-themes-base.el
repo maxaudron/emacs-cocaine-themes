@@ -181,18 +181,14 @@
     (flx-highlight-face :weight 'bold :foreground yellow :underline nil)
 
     ;; hi-lock
-    (hi-yellow   :background yellow)
-    (hi-pink     :background magenta)
-    (hi-red-b    :foreground red :weight 'bold)
-    (hi-green    :background green)
-    (hi-green-b  :foreground green :weight 'bold)
-    (hi-blue     :background blue)
-    (hi-blue-b   :foreground blue :weight 'bold)
+    (hi-red-b    :foreground red :weight 'underline)
+    (hi-green-b  :foreground green :weight 'underline)
+    (hi-blue-b   :foreground blue :weight 'underline)
     ;; (hi-black-b  :weight 'bold)
     ;; (hi-black-hb :inherit 'variable-pitch :weight 'bold :height 1.67)
 
     ;; hl-line
-    (hl-line :background bg-alt :extend t)
+    (hl-line :background base1 :extend t)
 
     ;; ido
     (ido-first-match :foreground orange)
