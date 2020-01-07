@@ -37,9 +37,9 @@
    (blue       '("#5793e0" "#5793e0" "brightblue"))
    (dark-blue  '("#1a4986" "#1a4986" "blue"))
    (teal       '("#008080" "#008080" "blue")) ; FIXME replace with real teal
-   (magenta    '("#c9b4cf" "#c9b4cf" "magenta"))
-   (violet     '("#b294bb" "#b294bb" "brightmagenta"))
-   (cyan       '("#8abeb7" "#8abeb7" "cyan"))
+   (magenta    '("#e8aafa" "#e8aafa" "magenta"))
+   (violet     '("#d298e3" "#d298e3" "brightmagenta"))
+   (cyan       '("#9ad9d0" "#9ad9d0" "cyan"))
    (dark-cyan  (doom-darken cyan 0.4))
 
    ;; face categories
@@ -55,9 +55,9 @@
    (methods        blue)
    (operators      fg)
    (type           yellow)
-   (strings        green)
-   (variables      red)
-   (numbers        orange)
+   (strings        orange)
+   (variables      cyan)
+   (numbers        red)
    (region         selection)
    (error          red)
    (warning        yellow)
@@ -67,8 +67,8 @@
    (vc-deleted     red)
 
    ;; custom categories
-   (modeline-bg     `(,(doom-darken (car bg-alt) 0.3) ,@(cdr base3)))
-   (modeline-bg-alt `(,(car bg) ,@(cdr base1)))
+   (modeline-bg     '("#101010" "black"   "black"      ))
+   (modeline-bg-alt base1)
    (modeline-fg     base8)
    (modeline-fg-alt comments)
    (-modeline-pad
@@ -97,8 +97,8 @@
     :background modeline-bg :foreground modeline-fg
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg)))
    (mode-line-inactive
-    :background modeline-bg-alt :foreground modeline-fg-alt
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt))))
+    :background modeline-bg :foreground modeline-fg-alt
+    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg))))
 
   ;; --- variables --------------------------
   ;; ()
