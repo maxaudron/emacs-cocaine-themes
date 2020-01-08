@@ -181,9 +181,9 @@
     (flx-highlight-face :weight 'bold :foreground yellow :underline nil)
 
     ;; hi-lock
-    (hi-red-b    :foreground red :weight 'underline)
-    (hi-green-b  :foreground green :weight 'underline)
-    (hi-blue-b   :foreground blue :weight 'underline)
+    (hi-red-b    :foreground red :underline t)
+    (hi-green-b  :foreground green :underline t)
+    (hi-blue-b   :foreground blue :underline t)
     ;; (hi-black-b  :weight 'bold)
     ;; (hi-black-hb :inherit 'variable-pitch :weight 'bold :height 1.67)
 
